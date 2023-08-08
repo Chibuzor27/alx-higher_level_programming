@@ -1,0 +1,6 @@
+#!/bin/bash
+touch $PYFILE"c"
+python3 -m py_compile $PYFILE $PYFILE"c"
+
+#import py_compile
+#py_compile.compile(py_filepath, pyc_filepath)
