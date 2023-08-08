@@ -1,3 +1,4 @@
 #!/usr/bin/python3
 for i in range(97, 97+26):
-    print(chr(i), end="")
+    print("{0:c}".format(i), end="")
+print()
