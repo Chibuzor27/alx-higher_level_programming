@@ -8,4 +8,4 @@ def uppercase(str):
             n = n + chr(asc-97+65)
         else:
             n = n + c
-    print(f'{n}')
+    print('{:s}'.format(n))
