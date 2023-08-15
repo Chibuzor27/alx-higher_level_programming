@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "lists.h"
 
-void clear_allocations(listint_t *head);
+void clear_allocations(listint_t **head);
 
 /**
  * is_palindrome - functione
@@ -49,7 +49,7 @@ int is_palindrome(listint_t **head)
 			break;
 		}
 	}
-	clear_allocations(*head);
+	clear_allocations(head);
 	prev = NULL;
 	last = NULL;
 	top = NULL;
@@ -60,9 +60,9 @@ int is_palindrome(listint_t **head)
  * clear_allocations - function
  * @head: head
  */
-void clear_allocations(listint_t *head)
+void clear_allocations(listint_t **head)
 {
-	listint_t *current = head;
+	listint_t *current = *head;
 
 	while (current->next != NULL)
 	{
