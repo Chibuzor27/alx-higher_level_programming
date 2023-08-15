@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include "lists.h"
 
+void clear_allocations(listint_t *head);
+
 /**
  * is_palindrome - functione
  * @head: the node
@@ -47,8 +49,26 @@ int is_palindrome(listint_t **head)
 			break;
 		}
 	}
+	clear_allocations(*head);
 	prev = NULL;
 	last = NULL;
 	top = NULL;
 	return (is_pal);
+}
+
+/**
+ * clear_allocations - function
+ * @head: head
+ */
+void clear_allocations(listint_t *head)
+{
+	listint_t *current = head;
+
+	while (current->next != NULL)
+	{
+		current->prev = NULL;
+		current = current->next;
+	}
+	current->prev = NULL;
+	current = NULL;
 }
