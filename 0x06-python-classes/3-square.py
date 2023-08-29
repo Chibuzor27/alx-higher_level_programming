@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Classes"""
 
+
 class Square:
     """Square"""
     __size = None
