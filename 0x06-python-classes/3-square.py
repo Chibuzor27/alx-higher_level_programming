@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 class Square:
+    """This is the documentation"""
     __size = None
 
     def __init__(self, size=0):
