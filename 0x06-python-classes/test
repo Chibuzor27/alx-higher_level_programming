@@ -1,30 +1,22 @@
 #!/usr/bin/python3
-"""Classes"""
+#SinglyLinkedList = __import__('100-singly_linked_list').SinglyLinkedList
 
+class LinkedList:
+    """List"""
+    pass #__head = None
 
-class Square:
-    """Square"""
-    __size = 0
-
-    def __init__(self, size=0):
-        self.size = size
-
-    def area(self):
-        """Area"""
-        return self.__size * self.__size
-
-    @property
-    def size(self):
-        """Get size"""
-        return self.__size
-
-    @size.setter
-    def size(self, value):
-        """Set size"""
-        if type(value) != int:
-            raise ValueError('size must be an integer')
-
-        if value < 0:
-            raise ValueError('size must be >= 0')
-
-        self.__size = value
+sll = LinkedList()
+'''
+sll.sorted_insert(2)
+sll.sorted_insert(5)
+sll.sorted_insert(3)
+sll.sorted_insert(10)
+sll.sorted_insert(1)
+sll.sorted_insert(-4)
+sll.sorted_insert(-3)
+sll.sorted_insert(4)
+sll.sorted_insert(5)
+sll.sorted_insert(12)
+sll.sorted_insert(3)
+'''
+print(sll)
