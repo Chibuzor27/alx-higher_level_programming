@@ -7,10 +7,10 @@
 >>> add_integer(0, -1)
 -1
 
->>> add_integer(90)
-90
+>>> add_integer(0)
+98
 
->>> add_integer(8.4)
+>>> add_integer(8.4, 0)
 8
 
 >>> add_integer()

@@ -2,7 +2,7 @@
 """Add module"""
 
 
-def add_integer(a, b=None):
+def add_integer(a, b=98):
     """Add integers"""
     if a is None or (type(a) != int and type(a) != float):
         raise TypeError('a must be an integer')
