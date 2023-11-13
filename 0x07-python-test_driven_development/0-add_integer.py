@@ -4,7 +4,7 @@
 
 def add_integer(a, b=None):
     """Add integers"""
-    if type(a) != int and type(a) != float:
+    if a is None or (type(a) != int and type(a) != float):
         raise TypeError('a must be an integer')
     if b is None:
         return a
