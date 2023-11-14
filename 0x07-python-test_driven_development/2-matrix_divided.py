@@ -29,10 +29,7 @@ must have the same size')
             for j in range(0, len(matrix[i])):
                 if type(matrix[i][j]) is int or type(matrix[i][j]) is float:
                     val = matrix[i][j]/div
-                    if (matrix[i][j] % div != 0 or div < 0):
-                        c.append(round(val, 2))
-                    else:
-                        c.append(int(val))
+                    c.append(round(val, 2))
                 else:
                     raise TypeError('matrix must be a matrix \
 (list of lists) of integers/floats')
