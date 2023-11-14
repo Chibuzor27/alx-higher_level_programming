@@ -4,6 +4,20 @@
 >>> text_indentation("John")
 John
 
+>>> text_indentation("Holberton.School")
+Holberton.
+<BLANKLINE>
+School
+
+>>> text_indentation("Holberton. School? How are you: John")
+Holberton.
+<BLANKLINE>
+School?
+<BLANKLINE>
+How are you:
+<BLANKLINE>
+John
+
 >>> text_indentation("   John")
 John
 
@@ -15,7 +29,7 @@ John
 
 >>> text_indentation("John.")
 John.
-
+<BLANKLINE>
 
 >>> text_indentation(None)
 Traceback (most recent call last):

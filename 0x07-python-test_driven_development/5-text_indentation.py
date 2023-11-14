@@ -17,7 +17,10 @@ def text_indentation(text):
         if line == 1 and space == 0:
             print(f'\n\n', end="")
             line = 0
-            space = 0
+            space = -1
+            if text[i] != ' ':
+                print(text[i], end="")
+                space = 0
             continue
 
         if space == -1 and text[i] == ' ':
@@ -38,6 +41,8 @@ def text_indentation(text):
             print(text[i], end="")
             line = 1
             space = 0
+            if (i == len(text) - 1):
+                print(f'\n\n', end="")
             continue
 
         print(text[i], end="")
