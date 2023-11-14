@@ -31,5 +31,11 @@ class TestMaxInteger(unittest.TestCase):
     def test_invalid_param(self):
         self.assertEqual(max_integer("az"), "z")
 
+    def test_invalid_param(self):
+        self.assertEqual(max_integer("za"), "z")
+
+    def test_invalid_param(self):
+        self.assertEqual(max_integer("aza"), "z")
+
 if __name__ == '__main__':
     unittest.main()
