@@ -10,13 +10,13 @@ class TestMaxInteger(unittest.TestCase):
     def test_default(self):
         self.assertEqual(max_integer([1, 2, 3, 4]), 4)
 
-    def test_default(self):
+    def test_middle(self):
         self.assertEqual(max_integer([1, 4, 2,]), 4)
 
-    def test_default(self):
+    def test_beginning(self):
         self.assertEqual(max_integer([4, 1, 2, 3]), 4)
 
-    def test_default(self):
+    def test_single(self):
         self.assertEqual(max_integer([4]), 4)
     
     def test_empty(self):
@@ -26,7 +26,7 @@ class TestMaxInteger(unittest.TestCase):
         with self.assertRaises(TypeError):
             max_integer(None)
 
-    def test_number(self):
+    def test_letter(self):
         with self.assertRaises(TypeError):
             max_integer([1, 2, 4.2, "m"])
 
@@ -37,14 +37,8 @@ class TestMaxInteger(unittest.TestCase):
     def test_missing_param(self):
         self.assertEqual(max_integer(), None)
 
-    def test_invalid_param(self):
+    def test_string_param(self):
         self.assertEqual(max_integer("az"), "z")
-
-    def test_invalid_param(self):
-        self.assertEqual(max_integer("za"), "z")
-
-    def test_invalid_param(self):
-        self.assertEqual(max_integer("aza"), "z")
 
 if __name__ == '__main__':
     unittest.main()
