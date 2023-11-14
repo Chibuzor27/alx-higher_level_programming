@@ -9,7 +9,8 @@ def matrix_divided(matrix, div):
     if div == 0:
         raise ZeroDivisionError('division by zero')
     if matrix is None:
-        raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
+        raise TypeError('matrix must be a matrix \
+(list of lists) of integers/floats')
     if len(matrix) > 0:
         width = -1
         hasValue = 0
@@ -19,8 +20,8 @@ def matrix_divided(matrix, div):
                 width = len(matrix[i])
             else:
                 if len(matrix[i]) != width:
-                    raise TypeError('Each row of the matrix must have the same size')
-
+                    raise TypeError('Each row of the matrix \
+must have the same size')
             if width == 0:
                 continue
 
@@ -28,12 +29,13 @@ def matrix_divided(matrix, div):
             for j in range(0, len(matrix[i])):
                 if type(matrix[i][j]) is int or type(matrix[i][j]) is float:
                     val = matrix[i][j]/div
-                    if (matrix[i][j] % div != 0):
+                    if (matrix[i][j] % div != 0 or div < 0):
                         c.append(round(val, 2))
                     else:
                         c.append(int(val))
                 else:
-                    raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
+                    raise TypeError('matrix must be a matrix \
+(list of lists) of integers/floats')
             res.append(c)
             hasValue = 1
         if hasValue == 1:
