@@ -7,4 +7,15 @@ class MyList(list):
 
     def print_sorted(self):
         """Print sorted"""
-        print(sorted(self))
+        l = MyList(self)
+        print(sorted(l))
+
+    def __str__(self):
+        """Print"""
+        s = "["
+        for i in range(0, len(self)):
+            s = s + str(self[i])
+            if i != len(self) - 1:
+                s = s + ", "
+        s = s + "]"
+        return s
