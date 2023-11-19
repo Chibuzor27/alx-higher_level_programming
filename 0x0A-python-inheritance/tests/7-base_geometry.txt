@@ -23,3 +23,27 @@ ValueError: sum must be greater than 0
 >>> b.integer_validator("sum", None)
 Traceback (most recent call last):
 TypeError: sum must be an integer
+
+>>> b.integer_validator("sum")
+Traceback (most recent call last):
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+>>> b.integer_validator()
+Traceback (most recent call last):
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+>>> b.integer_validator("sum", ())
+Traceback (most recent call last):
+TypeError: sum must be an integer
+
+>>> b.integer_validator("sum", [])
+Traceback (most recent call last):
+TypeError: sum must be an integer
+
+>>> b.integer_validator("sum", False)
+Traceback (most recent call last):
+TypeError: sum must be an integer
+
+>>> b.integer_validator("sum", {5})
+Traceback (most recent call last):
+TypeError: sum must be an integer
