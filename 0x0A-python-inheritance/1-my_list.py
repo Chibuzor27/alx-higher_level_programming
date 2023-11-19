@@ -7,8 +7,9 @@ class MyList(list):
 
     def print_sorted(self):
         """Print sorted"""
-        l = MyList(self)
-        print(sorted(l))
+        myl = sorted(self)
+        print(myl)
+        return myl
 
     def __str__(self):
         """Print"""

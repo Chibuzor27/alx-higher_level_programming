@@ -22,5 +22,8 @@
 >>> my_list.print_sorted()
 [-1, 1, 2]
 
+>>> print(my_list)
+[2, 1, -1]
+
 #python3 -m doctest -v ./tests/0-add_integer.txt
 #python3 -m doctest -v ./tests/1-my_list.txt
