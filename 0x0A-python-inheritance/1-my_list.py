@@ -9,7 +9,6 @@ class MyList(list):
         """Print sorted"""
         myl = sorted(self)
         print(myl)
-        return myl
 
     def __str__(self):
         """Print"""
