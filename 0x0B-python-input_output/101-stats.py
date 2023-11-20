@@ -29,7 +29,7 @@ try:
             errors = {}
             size = 0
 except KeyboardInterrupt:
-    sys.stdout.flush()
     print('File size: {}'.format(size))
     for key, value in sorted(errors.items()):
         print('{}: {}'.format(key, value))
+sys.stdout.flush()
