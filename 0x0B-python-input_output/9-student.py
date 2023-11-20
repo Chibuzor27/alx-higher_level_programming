@@ -2,9 +2,6 @@
 """Module"""
 
 
-import json
-
-
 class Student:
     """Class student"""
     def __init__(self, firstname, lastname, age):
