@@ -9,7 +9,8 @@ count = 0
 size = 0
 errors = {}
 try:
-    for line in sys.stdin:
+    for content in sys.stdin:
+        line = content.rstrip()
         arr = line.replace('\n', '').split(' ')
         code = int(arr[7])
         filesize = int(arr[8])
