@@ -5,7 +5,7 @@
 def append_after(filename="", search_string="", new_string=""):
     """Append after"""
     pg = ""
-    if filename != "" or filename != None:
+    if filename != "" or filename is not None:
         with open(filename, encoding="utf-8") as f:
             line = None
             while line != "":
