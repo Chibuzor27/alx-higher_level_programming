@@ -30,6 +30,7 @@ try:
             errors = {}
             size = 0
 except KeyboardInterrupt:
+    print('', end='\r', flush=True)
     print('File size: {}'.format(size))
     for key, value in sorted(errors.items()):
         print('{}: {}'.format(key, value))
