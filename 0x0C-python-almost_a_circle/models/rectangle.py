@@ -80,3 +80,14 @@ class Rectangle(Base):
     def area(self):
         """Calculate area"""
         return self.width * self.height
+
+    def display(self):
+        """Displa"""
+        for i in range(0, self.height):
+            for j in range(0, self.width):
+                print('#', end="")
+            print()
+    
+    def __str__(self):
+        """String representation"""
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
