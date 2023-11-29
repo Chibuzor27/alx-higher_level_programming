@@ -73,7 +73,7 @@ class TestRectangle(unittest.TestCase):
 
     def test_area(self):
         r = Rectangle(2, 5)
-        self.assertEqual(10)
+        self.assertEqual(r.area(), 10)
 
 
 if __name__ == "__main__":
