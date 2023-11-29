@@ -20,6 +20,11 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
+    def validate(self, name, value):
+        """Validate parameter"""
+        if type(value) != int:
+            raise TypeError('{} must be an integer'.format(name))
+
     @property
     def width(self):
         """Get width"""
@@ -28,6 +33,9 @@ class Rectangle(Base):
     @width.setter
     def width(self, value):
         """Set width"""
+        self.validate("width", value)
+        if value <= 0:
+            raise ValueError('width must be > 0')
         self.__width = value
 
     @property
@@ -38,6 +46,9 @@ class Rectangle(Base):
     @height.setter
     def height(self, value):
         """Set height"""
+        self.validate("height", value)
+        if value <= 0:
+            raise ValueError('height must be > 0')
         self.__height = value
 
     @property
@@ -48,6 +59,9 @@ class Rectangle(Base):
     @x.setter
     def x(self, value):
         """Set x"""
+        self.validate("x", value)
+        if value < 0:
+            raise ValueError('x must be >= 0')
         self.__x = value
 
     @property
@@ -58,4 +72,7 @@ class Rectangle(Base):
     @y.setter
     def y(self, value):
         """Set y"""
+        self.validate("y", value)
+        if value < 0:
+            raise ValueError('y must be >= 0')
         self.__y = value
