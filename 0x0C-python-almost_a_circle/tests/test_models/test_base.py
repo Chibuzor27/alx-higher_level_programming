@@ -25,6 +25,11 @@ class TestBase(unittest.TestCase):
         dic = {'x': 2, 'width': 10}
         self.assertEqual(Base.to_json_string(dic), '{"x": 2, "width": 10}')
 
+    def test_to_empty_dictionaries_json(self):
+        base = Base()
+        dic = {}
+        self.assertEqual(Base.to_json_string(dic), '[]')
+
 
 if __name__ == '__main__':
     unittest.main()
