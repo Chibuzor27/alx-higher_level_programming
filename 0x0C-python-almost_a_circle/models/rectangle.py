@@ -100,19 +100,25 @@ class Rectangle(Base):
         return "[Rectangle] ({}) {}/{} - {}/{}\
 ".format(self.id, self.x, self.y, self.width, self.height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Update instance variables"""
+
         size = len(args)
-        a = 0
-        while a < size and a < 5:
-            if a == 0:
-                self.id = args[a]
-            elif a == 1:
-                self.width = args[a]
-            elif a == 2:
-                self.height = args[a]
-            elif a == 3:
-                self.x = args[a]
-            elif a == 4:
-                self.y = args[a]
-            a = a + 1
+        if size > 0:
+            a = 0
+            while a < size and a < 5:
+                if a == 0:
+                    self.id = args[a]
+                elif a == 1:
+                    self.width = args[a]
+                elif a == 2:
+                    self.height = args[a]
+                elif a == 3:
+                    self.x = args[a]
+                elif a == 4:
+                    self.y = args[a]
+                a = a + 1
+        else:
+            if kwargs is not None:
+                for (name, value) in kwargs.items():
+                    setattr(self, name, value)
