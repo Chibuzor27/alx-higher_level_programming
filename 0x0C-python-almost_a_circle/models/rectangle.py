@@ -83,12 +83,12 @@ class Rectangle(Base):
 
     def display(self):
         """Displa"""
-        for i in range(0, self.height+self.x):
+        for i in range(0, self.height+self.y):
             if self.y > 0 and i < self.y:
                 print()
                 continue
             else:
-                for j in range(0, self.width+self.y):
+                for j in range(0, self.width+self.x):
                     if self.x > 0 and j < self.x:
                         print(' ', end="")
                     else:
