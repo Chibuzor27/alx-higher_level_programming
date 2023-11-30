@@ -2,6 +2,7 @@
 """Rectangle module"""
 
 
+import json
 from models.base import Base
 
 
@@ -122,3 +123,12 @@ class Rectangle(Base):
             if kwargs is not None:
                 for (name, value) in kwargs.items():
                     setattr(self, name, value)
+
+    def to_dictionary(self):
+        """Represent class as dictionary"""
+        return dict(
+            id=self.id,
+            width=self.width,
+            height=self.height,
+            x=self.x,
+            y=self.y)
