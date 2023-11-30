@@ -51,3 +51,11 @@ class Square(Rectangle):
             if kwargs is not None:
                 for (name, value) in kwargs.items():
                     setattr(self, name, value)
+
+    def to_dictionary(self):
+        """Represent class as dictionary"""
+        return dict(
+            id=self.id,
+            size=self.size,
+            x=self.x,
+            y=self.y)

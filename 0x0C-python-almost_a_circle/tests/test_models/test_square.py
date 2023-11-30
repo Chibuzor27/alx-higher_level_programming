@@ -155,6 +155,11 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(r.x, 20)
         self.assertEqual(r.y, 20)
 
+    def test_dictionary(self):
+        r = Square(10, 1, 9, 4)
+        self.assertEqual(r.to_dictionary(), {'\
+id': 4, 'size': 10, 'x': 1, 'y': 9})
+
 
 if __name__ == "__main__":
     unittest.main()
