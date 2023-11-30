@@ -93,7 +93,6 @@ class Rectangle(Base):
                         print(' ', end="")
                     else:
                         print('#', end="")
-                print()
 
     def __str__(self):
         """String representation"""
