@@ -99,3 +99,20 @@ class Rectangle(Base):
         """String representation"""
         return "[Rectangle] ({}) {}/{} - {}/{}\
 ".format(self.id, self.x, self.y, self.width, self.height)
+
+    def update(self, *args):
+        """Update instance variables"""
+        size = len(args)
+        a = 0
+        while a < size and a < 5:
+            if a == 0:
+                self.id = args[a]
+            elif a == 1:
+                self.width = args[a]
+            elif a == 2:
+                self.height = args[a]
+            elif a == 3:
+                self.x = args[a]
+            elif a == 4:
+                self.y = args[a]
+            a = a + 1
