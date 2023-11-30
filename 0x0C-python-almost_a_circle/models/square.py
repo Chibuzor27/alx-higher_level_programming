@@ -20,9 +20,9 @@ class Square(Rectangle):
     @size.setter
     def size(self, value):
         """Set size"""
-        self.validate("size", value)
-        if value < 0:
-            raise ValueError('size must be >= 0')
+        self.validate("width", value)
+        if value <= 0:
+            raise ValueError('width must be > 0')
         self.width = value
         self.height = value
 
