@@ -83,10 +83,17 @@ class Rectangle(Base):
 
     def display(self):
         """Displa"""
-        for i in range(0, self.height):
-            for j in range(0, self.width):
-                print('#', end="")
-            print()
+        for i in range(0, self.height+self.x):
+            if self.y > 0 and i < self.y:
+                print()
+                continue
+            else:
+                for j in range(0, self.width+self.y):
+                    if self.x > 0 and j < self.x:
+                        print(' ', end="")
+                    else:
+                        print('#', end="")
+                print()
 
     def __str__(self):
         """String representation"""
