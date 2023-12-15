@@ -1,2 +1,1 @@
--- List table rows
-SELECT * FROM `second_table`
+select * from tempreatures
